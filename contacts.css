@@ -1,0 +1,284 @@
+/* ---------- Global Styles ---------- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #f7f7f7;
+  color: #333;
+}
+
+/* ---------- Header (Fixed) ---------- */
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: #fff;
+  padding: 15px 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  z-index: 1000;
+}
+.back-button {
+  width: 40px;
+  height: 40px;
+  background-color: #000;
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+.back-button:hover {
+  background-color: #333;
+}
+.back-button i {
+  font-size: 18px;
+}
+.logo-text {
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+/* ---------- Main Content Area ---------- */
+.contacts-main {
+  max-width: 1000px;
+  margin: 100px auto 20px; /* top margin to clear the fixed header */
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  text-align: center;
+}
+.contacts-main h1 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+/* ---------- Controls Section (Search & Sort) ---------- */
+.search-sort-bar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+/* Search Bar */
+.search-bar {
+  display: flex;
+  gap: 0;
+  max-width: 400px;
+  width: 100%;
+}
+.search-bar input {
+  flex: 1;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ddd;
+  border-right: none;
+  border-radius: 5px 0 0 5px;
+  font-family: 'Poppins', sans-serif;
+}
+.search-bar input::placeholder {
+  color: #aaa;
+  font-size: 16px;
+  font-family: 'Poppins', sans-serif;
+}
+.search-bar button {
+  width: 40px;
+  height: 40px;
+  background-color: #000;
+  color: #fff;
+  border: 1px solid #ddd;
+  border-left: none;
+  border-radius: 0 5px 5px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+.search-bar button i {
+  font-size: 16px;
+}
+.search-bar button:hover {
+  background-color: #333;
+}
+
+/* Sort Group */
+.sort-group {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 16px;
+  font-family: 'Poppins', sans-serif;
+  color: #333;
+}
+.sort-group label {
+  white-space: nowrap;
+}
+.sort-group select {
+  padding: 8px 10px;
+  font-size: 16px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  background-color: #fff;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* ---------- Add Contact Section ---------- */
+.add-contact-section {
+  margin-bottom: 20px;
+  text-align: center;
+}
+.add-contact-section h2 {
+  font-size: 1.8rem;
+  margin-bottom: 10px;
+}
+.add-contact-section form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+  align-items: center;
+}
+.add-contact-section input,
+.add-contact-section select {
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  flex: 1 1 45%;
+  max-width: 400px;
+  font-family: 'Poppins', sans-serif;
+}
+.add-contact-section input::placeholder,
+.add-contact-section select::placeholder {
+  color: #aaa;
+  font-size: 16px;
+  font-family: 'Poppins', sans-serif;
+}
+.add-contact-section button {
+  padding: 10px 15px;
+  background-color: #1E90FF;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 10px;
+  display: block;
+  width: 100%;
+  max-width: 200px;
+  margin-left: auto;
+  margin-right: auto;
+  font-family: 'Poppins', sans-serif;
+}
+.add-contact-section button:hover {
+  background-color: #0056b3;
+}
+
+/* Status Message (below add contact form) */
+.status-message {
+  margin-top: 15px;
+  padding: 10px;
+  border-radius: 5px;
+  font-size: 16px;
+  font-family: 'Poppins', sans-serif;
+  text-align: center;
+  display: none; /* Initially hidden; shown by JS */
+}
+.status-message.success {
+  background-color: #d4edda;
+  color: #155724;
+  border: 1px solid #c3e6cb;
+  display: block;
+}
+.status-message.error {
+  background-color: #f8d7da;
+  color: #721c24;
+  border: 1px solid #f5c6cb;
+  display: block;
+}
+
+/* ---------- Contacts List Section ---------- */
+.contacts-list-section {
+  margin-top: 20px;
+}
+.contacts-list-section h2 {
+  font-size: 1.8rem;
+  margin-bottom: 10px;
+}
+.contacts-list-section table {
+  width: 100%;
+  border-collapse: collapse;
+}
+.contacts-list-section th,
+.contacts-list-section td {
+  padding: 12px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+.contacts-list-section th {
+  background-color: #f1f1f1;
+  font-family: 'Poppins', sans-serif;
+}
+.contacts-list-section td {
+  font-family: 'Poppins', sans-serif;
+}
+
+/* ---------- Action Buttons (Edit/Delete) ---------- */
+.edit-btn, .delete-btn {
+  background-color: transparent;
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+.edit-btn i, .delete-btn i {
+  font-size: 18px;
+  margin-right: 5px;
+}
+.edit-btn:hover {
+  color: #007BFF;
+}
+.delete-btn:hover {
+  color: #d9534f;
+}
+.edit-btn:focus, .delete-btn:focus {
+  outline: none;
+}
+
+/* ---------- Responsive Styles ---------- */
+@media (max-width: 768px) {
+  .contacts-main {
+    margin: 10px;
+    padding: 15px;
+  }
+  .search-sort-bar {
+    flex-direction: column;
+    gap: 15px;
+  }
+  .add-contact-section form {
+    flex-direction: column;
+  }
+  .add-contact-section input,
+  .add-contact-section select {
+    flex: 1 1 100%;
+  }
+  .add-contact-section button {
+    width: 100%;
+  }
+  .contacts-list-section {
+    overflow-x: auto;
+  }
+}

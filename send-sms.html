@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Send SMS - ZimSMS</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+</head>
+<body class="send-sms-body">
+  <!-- Header: Back Button on Left; Logo on Right -->
+  <header class="send-sms-header">
+    <nav class="send-sms-nav">
+      <button id="back-btn" class="back-btn">
+        <i class="fas fa-arrow-left"></i>
+      </button>
+    </nav>
+    <div class="header-logo">zimSMS</div>
+  </header>
+
+  <!-- Main Content -->
+  <main class="send-sms-main">
+    <h1><i class="fas fa-paper-plane"></i> Send SMS</h1>
+    <form id="send-sms-form">
+      <div class="form-group">
+        <label for="recipient-number"><i class="fas fa-phone"></i> Recipient Number</label>
+        <input type="text" id="recipient-number" placeholder="Enter phone number (e.g. 0771234567)" maxlength="10" />
+      </div>
+      <div class="form-group">
+        <label for="sms-message"><i class="fas fa-comment-dots"></i> Message</label>
+        <textarea id="sms-message" rows="5" placeholder="Type your message here (max 160 characters)" maxlength="160"></textarea>
+      </div>
+      <!-- Character counter will appear below the textarea -->
+      <small id="char-count" class="char-counter"></small>
+      <button type="submit" class="sms-btn">
+        <i class="fas fa-paper-plane"></i> Send SMS
+      </button>
+      <div id="status-message" class="status-message"></div>
+    </form>
+
+    <section class="contacts-selection">
+      <h2><i class="fas fa-address-book"></i> Select a Contact</h2>
+      <ul id="contacts-list"></ul>
+    </section>
+  </main>
+
+  <script src="send-sms.js"></script>
+</body>
+</html>

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ZimSMS Contacts</title>
+  <link rel="stylesheet" href="contacts.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
+</head>
+<body>
+  <!-- Fixed Header: Back Button (left) and Logo (right) -->
+  <header class="header">
+    <button class="back-button" onclick="window.location.href='dashboard.html'">
+      <i class="fas fa-arrow-left"></i>
+    </button>
+    <div class="logo-text">ZimSMS</div>
+  </header>
+
+  <main class="contacts-main">
+    <h1>Manage Contacts</h1>
+
+    <!-- Controls Section: Search & Sort -->
+    <section class="search-sort-bar">
+      <div class="search-bar">
+        <input type="text" id="searchInput" placeholder="Search contacts..." />
+        <button id="searchBtn" title="Search">
+          <i class="fas fa-search"></i>
+        </button>
+      </div>
+      <div class="sort-group">
+        <label for="sortSelect">Sort by:</label>
+        <select id="sortSelect">
+          <option value="name">Name</option>
+          <option value="date">Date Added</option>
+        </select>
+      </div>
+    </section>
+
+    <!-- Add Contact Section -->
+    <section class="add-contact-section">
+      <h2>Add Contact</h2>
+      <form id="contactForm">
+        <input type="text" id="name" placeholder="Name" required>
+        <input type="text" id="number" placeholder="Phone Number" required>
+        <select id="groupSelect">
+          <option value="">Select Group</option>
+        </select>
+        <button type="submit" class="add-btn">Add Contact</button>
+      </form>
+      <!-- Status message placed right below the add contact form -->
+      <div id="statusMessage" class="status-message"></div>
+    </section>
+
+    <!-- Contacts List Section -->
+    <section class="contacts-list-section">
+      <h2>Contacts</h2>
+      <table id="contactsTable">
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Number</th>
+            <th>Group</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+          <!-- Dynamic contacts will be inserted here -->
+        </tbody>
+      </table>
+    </section>
+  </main>
+
+  <script src="contacts.js"></script>
+</body>
+</html>

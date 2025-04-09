@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ZimSMS Dashboard</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+</head>
+<body class="dashboard-body">
+
+  <!-- Header -->
+  <header class="dashboard-header">
+    <div class="logo">ZimSMS</div>
+    <nav class="dashboard-nav">
+      <button id="logout-btn">
+        <i class="fas fa-sign-out-alt"></i> Logout
+      </button>
+    </nav>
+  </header>
+
+  <!-- Main Content Area -->
+  <main class="dashboard-main">
+    <h1 id="welcome-msg">Welcome, <span>Guest</span>!</h1>
+    <p>Your SMS balance: <strong id="sms-balance">500</strong></p>
+
+    <!-- Dashboard Content -->
+    <section class="dashboard-section">
+      <h2>Quick Actions</h2>
+      <!-- Send SMS Button with Link -->
+      <a href="send-sms.html">
+        <button class="dashboard-btn">
+          <i class="fas fa-paper-plane"></i> Send SMS
+        </button>
+      </a>
+
+      <!-- Buy SMS Button -->
+      <a href="buy-sms.html">
+      <button class="dashboard-btn">
+        <i class="fas fa-credit-card"></i> Buy SMS
+      </button>
+      </a>
+
+      <!-- Manage Contacts Button -->
+      <a href="contacts.html">
+      <button class="dashboard-btn">
+        <i class="fas fa-address-book"></i> Manage Contacts
+      </button>
+      </a>
+    </section>
+
+    <!-- Recent Activity Section -->
+    <section class="dashboard-section" id="activity-section">
+      <h2><i class="fas fa-history"></i> Recent Activity</h2>
+      <ul id="activity-log">
+        <li>No recent activity yet.</li>
+      </ul>
+    </section>
+    
+  </main>
+
+  <script src="dashboard.js"></script>
+</body>
+</html>

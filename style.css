@@ -1,0 +1,929 @@
+/* Global Styles */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #fff;
+    color: #333;
+    line-height: 1.6;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+ul {
+    list-style: none;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+/* Header */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 1.5rem;
+    border-bottom: 1px solid #eee;
+    position: sticky;
+    top: 0;
+    background: #fff;
+    z-index: 999;
+}
+
+.logo {
+    font-weight: 700;
+    font-size: 1.5rem;
+}
+
+.highlight {
+    color: skyblue;
+}
+
+nav {
+    position: relative;
+}
+
+.menu-toggle {
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    display: block;
+}
+
+.nav-links {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    right: 0;
+    background: #fff;
+    width: 200px;
+    padding: 1rem;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    border-radius: 10px;
+}
+
+.nav-links.active {
+    display: flex;
+}
+
+.nav-links li {
+    margin: 10px 0;
+}
+
+.nav-links a {
+    font-weight: 600;
+    color: #333;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: skyblue;
+}
+
+/* Hero */
+#hero {
+    text-align: center;
+    padding: 120px 20px 80px;
+    background: linear-gradient(to bottom, #ffffff, #e6f6ff);
+}
+
+.hero-content {
+    max-width: 600px;
+    margin: auto;
+}
+
+.hero-icon {
+    margin-bottom: 1.5rem;
+}
+
+.hero-icon svg {
+    display: block;
+    margin: 0 auto;
+}
+
+.hero-content h1 {
+    font-size: 2.4rem;
+    margin-bottom: 1rem;
+    color: #222;
+}
+
+.hero-content p {
+    font-size: 1rem;
+    margin-bottom: 2rem;
+    color: #555;
+}
+
+.hero-content .cta-button {
+    background: #000;
+    color: #fff;
+    padding: 14px 30px;
+    font-size: 1rem;
+    border-radius: 8px;
+    transition: background 0.3s ease;
+}
+
+.hero-content .cta-button:hover {
+    background: #333;
+}
+
+.trust-tagline {
+    margin-top: 1.5rem;
+    font-size: 0.95rem;
+    color: #666;
+}
+
+.trust-tagline i {
+    font-size: 1.3rem; /* Adjust the size to match the text */
+    margin-right: 8px; /* Space between the icon and text */
+    vertical-align: middle;
+}
+
+/* Features */
+#features {
+    padding: 60px 20px;
+    text-align: center;
+    background: #fff;
+}
+
+#features h2 {
+    font-size: 1.6rem;
+    margin-bottom: 2rem;
+}
+
+.feature-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.feature-item {
+    padding: 1rem;
+    border-radius: 10px;
+    background: #f3f3f3;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+}
+
+.feature-item i {
+    font-size: 1.5rem;
+    color: skyblue;
+    margin-bottom: 0.5rem;
+}
+
+.feature-item h3 {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+}
+
+/* About Section */
+#about {
+    padding: 60px 20px;
+    background: #fafafa;
+    text-align: center;
+}
+
+#about h2 {
+    font-size: 1.6rem;
+    margin-bottom: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center; /* Aligns the icon and text */
+    color: #222; /* Ensure text is legible */
+}
+
+#about i {
+    font-size: 1.5rem;
+    margin-right: 10px; /* Space between the icon and text */
+    color: skyblue; /* Matching icon color with the theme */
+}
+
+#about p {
+    max-width: 600px;
+    margin: 0 auto;
+    font-size: 1rem;
+    color: #555;
+    line-height: 1.6;
+}
+
+/* CTA Section */
+#cta {
+    background: #fff;
+    padding: 60px 20px;
+    text-align: center;
+    border-top: 1px solid #eee;
+}
+
+.cta-content {
+    max-width: 500px;
+    margin: auto;
+}
+
+.cta-content i {
+    font-size: 2.5rem;
+    color: skyblue;
+    margin-bottom: 1rem;
+}
+
+#cta h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: #222;
+}
+
+#cta .cta-button {
+    background: #000;
+    color: #fff;
+    padding: 12px 25px;
+    border-radius: 8px;
+    font-weight: 600;
+    transition: background 0.3s ease;
+}
+
+#cta .cta-button:hover {
+    background: #333;
+}
+
+
+/* Auth Section Styles */
+.auth-card {
+    background: #fff;
+    max-width: 400px;
+    margin: 20px auto; /* Added margin for spacing */
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    width: 100%;
+}
+
+/* Input Fields */
+.auth-card form input {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+}
+
+/* Submit Button */
+.auth-card button {
+    width: 100%;
+    padding: 12px;
+    background: #000;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-weight: 600;
+    margin-top: 10px;
+}
+
+/* Switch Form Links */
+.switch-form {
+    margin-top: 1rem;
+    text-align: center;
+}
+
+.switch-form p {
+    font-size: 0.9rem;
+}
+
+.switch-form a {
+    color: skyblue;
+    text-decoration: none;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.switch-form a:hover {
+    text-decoration: underline;
+}
+
+  
+/* Error Message Styles */
+.error-message {
+    color: red;
+    font-size: 0.875rem;
+    margin-top: 0.5rem;
+    text-align: left;
+}
+
+.error {
+    border: 1px solid red;
+}
+
+
+
+
+
+/* Contact */
+#contact {
+    text-align: center;
+    padding: 60px 20px;
+    background: #f9f9f9;
+}
+
+#contact h2 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.social-icons {
+    margin-top: 1rem;
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+}
+
+.social-icons a {
+    font-size: 1.5rem;
+    color: #333;
+    transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+    color: skyblue;
+}
+
+/* FAQ */
+#faq {
+    background: #fff;
+    padding: 60px 20px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.faq-item {
+    border-bottom: 1px solid #eee;
+    padding: 1rem 0;
+}
+
+.faq-item h4 {
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+.faq-answer {
+    display: none;
+    font-size: 0.95rem;
+    padding: 0.5rem 0;
+}
+
+.faq-answer.active {
+    display: block;
+}
+
+/* Error Message Styles */
+.error-message {
+    color: red;
+    font-size: 0.875rem;
+    margin-top: 0.5rem;
+    text-align: left;
+}
+
+.error {
+    border: 1px solid red;
+}
+/* Styles for individual field errors */
+.error-message {
+  margin-top: 0.5rem;
+  font-size: 0.85rem;
+  color: #d93025;         /* A red tone for errors */
+  display: none;          /* Hidden by default, shown via JS if needed */
+}
+
+/* Global form messages (for success or general error messages) */
+.form-message {
+  margin-top: 1rem;
+  padding: 0.75rem 1rem;
+  border-radius: 4px;
+  font-size: 0.95rem;
+  text-align: center;
+  display: block;
+}
+
+/* Error message styling for form-level messages */
+.form-message.error {
+  background-color: #ffe5e5;  /* Light red background */
+  border: 1px solid #ff4d4d;  /* Red border */
+  color: #d93025;             /* Darker red text */
+}
+
+/* Success message styling */
+.form-message.success {
+  background-color: #e6f7e6;  /* Light green background */
+  border: 1px solid #4caf50;  /* Green border */
+  color: #2d862d;             /* Dark green text */
+}
+
+
+/* Footer */
+footer {
+    background: #f9f9f9; /* Light gray background */
+    color: #555;
+    padding: 20px;
+    font-size: 0.9rem;
+    text-align: center;
+    border-top: 1px solid #ddd; /* Thin horizontal separator */
+}
+
+/* AOS Animations */
+[data-aos] {
+    opacity: 0;
+    transition-property: opacity, transform;
+}
+
+[data-aos].aos-animate {
+    opacity: 1;
+}
+
+/* Media Queries */
+@media (min-width: 768px) {
+    .menu-toggle {
+        display: none;
+    }
+
+    .nav-links {
+        display: flex !important;
+        position: static;
+        flex-direction: row;
+        gap: 2rem;
+        background: none;
+        box-shadow: none;
+        width: auto;
+        padding: 0;
+    }
+
+    .feature-list {
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    #hero h1 {
+        font-size: 2.5rem;
+    }
+
+    .auth-card {
+        padding: 3rem;
+    }
+}
+
+
+/* ---------- Dashboard Page Styles (Centered Layout) ---------- */
+
+body.dashboard-body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #f7f7f7;
+  margin: 0;
+  padding: 0;
+}
+
+/* Header */
+.dashboard-header {
+  background-color: #fff;
+  padding: 20px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+  color: #333;
+}
+
+.dashboard-nav button {
+  background: #000;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+
+.dashboard-nav button:hover {
+  background-color: #333;
+}
+
+/* Main Content */
+.dashboard-main {
+  max-width: 800px;      /* Constrain content width */
+  margin: 40px auto;     /* Center horizontally */
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+  text-align: center;    /* Center text content */
+}
+
+.dashboard-main h1 {
+  font-size: 2.5rem;
+  color: #1E90FF;        /* Sky blue welcome text */
+  margin-bottom: 10px;
+}
+
+.dashboard-main p {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+/* Dashboard Sections */
+.dashboard-section {
+  margin: 30px 0;
+  padding: 20px;
+  background: #fafafa;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  text-align: center;
+}
+
+.dashboard-section h2 {
+  font-size: 1.8rem;
+  margin-bottom: 15px;
+  color: #333;
+}
+
+/* Activity Log */
+#activity-log {
+  list-style: none;
+  padding: 0;
+  margin-top: 20px;
+}
+
+#activity-log li {
+  padding: 10px;
+  border-bottom: 1px solid #eee;
+  font-size: 1rem;
+  color: #555;
+}
+
+#activity-log li:last-child {
+  border-bottom: none;
+}
+
+/* Dashboard Buttons */
+.dashboard-btn {
+  background: #000;      /* Black buttons */
+  color: white;
+  border: none;
+  padding: 12px 25px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  margin: 10px;
+  transition: background-color 0.3s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.dashboard-btn:hover {
+  background-color: #1E90FF; /* Sky blue on hover */
+}
+
+/* Remove text decoration from links wrapping buttons */
+.dashboard-main a {
+  text-decoration: none;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .dashboard-main {
+    margin: 20px;
+    padding: 15px;
+  }
+  .dashboard-main h1 {
+    font-size: 2rem;
+  }
+}
+
+/* ---------- Send SMS Page Styles (Centered Layout) ---------- */
+
+body.send-sms-body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #f7f7f7;
+  margin: 0;
+  padding: 0;
+}
+
+/* Header */
+.send-sms-header {
+  background-color: white;
+  padding: 15px 20px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.send-sms-nav {
+  display: flex;
+  gap: 15px;
+}
+
+/* Back Button: Black circle with arrow */
+.back-btn {
+  background-color: #000;
+  color: white;
+  border: none;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.3s ease;
+}
+
+.back-btn:hover {
+  background-color: #333;
+}
+
+.back-btn i {
+  font-size: 18px;
+}
+
+/* Header Logo (text on right) */
+.header-logo {
+  font-size: 24px;
+  font-weight: 600;
+  color: #333;
+}
+
+/* Main Content */
+.send-sms-main {
+  max-width: 600px;
+  margin: 50px auto;
+  padding: 30px;
+  background-color: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.06);
+}
+
+.send-sms-main h1 {
+  font-size: 28px;
+  font-weight: 600;
+  margin-bottom: 25px;
+  text-align: center;
+}
+
+/* Form Styles */
+.send-sms-main form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 6px;
+  color: #333;
+}
+
+/* Inputs & Textareas */
+input,
+textarea {
+  width: 100%;
+  padding: 12px;
+  font-size: 16px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background-color: #f9f9f9;
+  color: #333;
+  transition: border-color 0.3s ease;
+  font-family: 'Poppins', sans-serif;
+}
+
+input:focus,
+textarea:focus {
+  border-color: #1E90FF;
+  outline: none;
+}
+
+/* Placeholder Text */
+input::placeholder,
+textarea::placeholder {
+  font-family: 'Poppins', sans-serif;
+  color: #aaa;
+  font-size: 16px;
+}
+
+/* Character Counter */
+.char-counter {
+  font-size: 14px;
+  text-align: right;
+  color: #666;
+  margin-top: -10px;
+  margin-bottom: 10px;
+}
+
+/* Send SMS Button */
+button.sms-btn {
+  background-color: #1E90FF;
+  color: white;
+  padding: 12px 25px;
+  font-size: 16px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  transition: background-color 0.3s ease;
+  max-width: 200px;
+}
+
+button.sms-btn:hover {
+  background-color: #0056b3;
+}
+
+button.sms-btn i {
+  font-size: 18px;
+}
+
+/* Status Message */
+.status-message {
+  margin-top: 15px;
+  font-size: 16px;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  text-align: center;
+  justify-content: center;
+}
+
+.sms-success {
+  background-color: #e6f7ff;
+  color: #1E90FF;
+  padding: 10px 15px;
+  margin-top: 10px;
+  border-left: 4px solid #1E90FF;
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+.sms-error {
+  background-color: #fff3cd;
+  color: #856404;
+  padding: 10px 15px;
+  margin-top: 10px;
+  border-left: 4px solid #ffc107;
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+/* Contacts Selection Section */
+.contacts-selection {
+  margin-top: 40px;
+}
+
+.contacts-selection h2 {
+  font-size: 20px;
+  margin-bottom: 15px;
+  font-weight: 600;
+  color: #333;
+}
+
+#contacts-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+#contacts-list li {
+  flex: 1 1 45%;
+}
+
+.contact-btn {
+  width: 100%;
+  padding: 10px;
+  background-color: #f1f1f1;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  font-size: 15px;
+  cursor: pointer;
+  text-align: left;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  transition: background-color 0.2s ease;
+}
+
+.contact-btn:hover {
+  background-color: #e7f3ff;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .send-sms-main {
+    margin: 20px;
+    padding: 20px;
+  }
+
+  .send-sms-main h1 {
+    font-size: 22px;
+  }
+
+  input,
+  textarea {
+    font-size: 14px;
+  }
+
+  button.sms-btn {
+    width: 100%;
+  }
+
+  #contacts-list li {
+    flex: 1 1 100%;
+  }
+}
+
+@media (min-width: 769px) {
+  .send-sms-main {
+    margin: 60px auto;
+  }
+}
+
+  
+ /* Toast Notification Styles */
+.toast {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #1E90FF;
+    color: white;
+    padding: 15px 20px;
+    border-radius: 5px;
+    font-size: 16px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+    opacity: 1;
+    transition: opacity 0.5s ease-out;
+    z-index: 1000;
+  }
+  
+  .toast-success {
+    background-color: #28a745;
+  }
+  
+  .toast-error {
+    background-color: #dc3545;
+  }
+  
+  .fade-out {
+    opacity: 0;
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 768px) {
+    .packages {
+      flex-direction: column;
+    }
+    
+    .package {
+      flex: 1 1 100%;
+    }
+  }
+  /* Smooth transition for buttons and inputs */
+button, input, textarea {
+    transition: all 0.3s ease;
+  }
+  
+  button:hover {
+    transform: scale(1.02);
+  }
+  
+  input:focus, textarea:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 5px rgba(0,123,255,0.5);
+  }
+  
+  
+  
